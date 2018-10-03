@@ -10,7 +10,7 @@ public class Tokenizer {
         boolean contain = false;
         for (int i = 0; i < tokens.size(); i++) {
             String v = tokens.get(i).getPalabra();
-            if (v.contains(c)) {
+            if (v.contains(c) || v.equals(c)) {
                 contain = true;
                 break;
             }
@@ -26,12 +26,13 @@ public class Tokenizer {
                 equal = true;
                 break;
             }
-            return equal;
         }
+
+        return equal;
     }
 
     public Tokenizer() {
-
+            this.tokens = new ArrayList<Token>();
             this.tokens.add(new Token("Morty", 1));
             this.tokens.add(new Token("Summer", 2));
             this.tokens.add(new Token("Spacecruiser", 3));
@@ -44,35 +45,35 @@ public class Tokenizer {
             this.tokens.add(new Token("Passthebutter", 9));
             this.tokens.add(new Token("Adventure", 10));
             this.tokens.add(new Token("Jellybean", 11));
-//                            this.tokens.add(new Token("Plumbus", 12),
-//                                    this.tokens.add(new Token("Dead", 13),
-//                                            this.tokens.add(new Token("Alive", 14),
-//                                                    this.tokens.add(new Token("//", 15),
-//                                                            this.tokens.add(new Token("&&", 16),
-//                                                                    this.tokens.add(new Token("||", 17),
-//                                                                            this.tokens.add(new Token("Microverse", 18),
-//                                                                            this.tokens.add(new Token("Rick", 19),
-//                                                                                    this.tokens.add(new Token("+", 20),
-//            new Token("++", 21),
-//            new Token("-", 22),
-//            new Token("--", 23),
-//            new Token("*", 24),
-//            new Token("/", 25),
-//            new Token("%", 26),
-//            new Token("=", 27),
-//            new Token(">", 28),
-//            new Token("<", 29),
-//            new Token(">=", 30),
-//            new Token("<=", 31),
-//            new Token("!=", 32),
-//            new Token("==", 33),
-//            new Token("{", 34),
-//            new Token("}", 35),
-//            new Token("(", 36),
-//            new Token(")", 37),
-//            new Token(",", 38),
-//            new Token(".", 39)
-//            };
+            this.tokens.add(new Token("Plumbus", 12));
+            this.tokens.add(new Token("Dead", 13));
+            this.tokens.add(new Token("Alive", 14));
+            this.tokens.add(new Token("//", 15));
+            this.tokens.add(new Token("&&", 16));
+            this.tokens.add(new Token("||", 17));
+            this.tokens.add(new Token("Microverse", 18));
+            this.tokens.add(new Token("Rick", 19));
+            this.tokens.add(new Token("+", 20));
+            this.tokens.add(new Token("++", 21));
+            this.tokens.add(new Token("-", 22));
+            this.tokens.add(new Token("--", 23));
+            this.tokens.add(new Token("*", 24));
+            this.tokens.add(new Token("/", 25));
+            this.tokens.add(new Token("%", 26));
+            this.tokens.add(new Token("=", 27));
+            this.tokens.add(new Token(">", 28));
+            this.tokens.add(new Token("<", 29));
+            this.tokens.add(new Token(">=", 30));
+            this.tokens.add(new Token("<=", 31));
+            this.tokens.add(new Token("!=", 32));
+            this.tokens.add(new Token("==", 33));
+            this.tokens.add(new Token("{", 34));
+            this.tokens.add(new Token("}", 35));
+            this.tokens.add(new Token("(", 36));
+            this.tokens.add(new Token(")", 37));
+            this.tokens.add(new Token(",", 38));
+            this.tokens.add(new Token(".", 39));
+
 
     }
 
