@@ -1,34 +1,35 @@
 package com.company;
 
-
-import javax.sound.midi.SysexMessage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.StringTokenizer;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Lexical {
-
-
-    public void readFile(String path){
+    private String file;
+    private void readFile(String path) {
         try {
             FileInputStream fis = new FileInputStream(new File(path));
-            //Lee el archivo y genera tabal de simbolos
-
-            Tokenizer tokenizer = new Tokenizer();
 
             int size = fis.available();
-            //System.out.print("Size of chars:" + size);
-            String tmp = "";
-            for(int i = 0; i < size; i++){
-                char character = (char)fis.read();
-                tmp += character;
-
+            this.file = "";
+            for (int i = 0; i < size; i++) {
+                char character = (char) fis.read();
+                this.file += character;
             }
-            StringTokenizer t = new StringTokenizer(tmp);
+        } catch (Exception e) {
+            System.out.print(e.toString());
+        } finally {
+        }
+    }
 
-            while(t.hasMoreTokens()){
+    public void analize(String path){
+
+        this.readFile(path);
+
+        StringTokenizer t = new StringTokenizer(this.file);
+        Tokenizer tokenizer = new Tokenizer();
+
+        while(t.hasMoreTokens()){
                 String token = t.nextToken();
                 Boolean found = false;
                 for(int a = 0; a < tokenizer.tokens.size(); a++){
@@ -41,22 +42,6 @@ public class Lexical {
                     }
                 }
                 if(!found) System.out.println("Error lexico: '" + token + "' no reconocido");
-
             }
-
-        }catch (Exception e) {
-            System.out.print(e.toString());
-        }finally{
-
-        }
-        /*
-        * Aqui va suceder la magia
-        *  - Michael Joseph Gregory Jackson
-        * */
     }
-
-
-
-
-
 }
