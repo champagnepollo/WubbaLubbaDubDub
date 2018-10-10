@@ -1,50 +1,45 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Tokenizer {
 
-    public Tokenizer(){
-            Token[] tokens = {new Token("Morty", 1),
-            new Token("Summer", 2),
-            new Token("Spacecruiser", 3),
-            new Token("Meeseek", 3),
-            new Token("Yes", 4),
-            new Token("Cake", 5),
-            new Token("Mahmen", 6),
-            new Token("Jerry", 7),
-            new Token("Schezwan", 8),
-            new Token("Passthebutter", 9),
-            new Token("Adventure", 10),
-            new Token("Jellybean", 11),
-            new Token("Plumbus", 12),
-            new Token("Dead", 13),
-            new Token("Alive", 14),
-            new Token("//", 15),
-            new Token("&&", 16),
-            new Token("||", 17),
-            new Token("Microverse", 18),
-            new Token("Rick", 19),
-            new Token("+", 20),
-            new Token("++", 21),
-            new Token("-", 22),
-            new Token("--", 23),
-            new Token("*", 24),
-            new Token("/", 25),
-            new Token("%", 26),
-            new Token("=", 27),
-            new Token(">", 28),
-            new Token("<", 29),
-            new Token(">=", 30),
-            new Token("<=", 31),
-            new Token("!=", 32),
-            new Token("==", 33),
-            new Token("{", 34),
-            new Token("}", 35),
-            new Token("(", 36),
-            new Token(")", 37),
-            new Token(",", 38),
-            new Token(".", 39)
-            };
+    public ArrayList<Lexema> tokens;
+
+    public Tokenizer() {
+            this.tokens = new ArrayList<Lexema>();
+            this.tokens.add(new Lexema(TokenType.Comentario, "(//(.*?)[\r$]?\n).*"));
+            this.tokens.add(new Lexema(TokenType.Espacio, "( ).*"));
+            this.tokens.add(new Lexema(TokenType.AbrirParentesis, "(\\().*"));
+            this.tokens.add(new Lexema(TokenType.CerrarParentesis, "(\\)).*"));
+            this.tokens.add(new Lexema(TokenType.PuntoyComa, "(;).*"));
+            this.tokens.add(new Lexema(TokenType.AbrirParentesis, "(\\().*"));
+            this.tokens.add(new Lexema(TokenType.Coma, "(,).*"));
+            this.tokens.add(new Lexema(TokenType.AbrirLlave, "(\\{).*"));
+            this.tokens.add(new Lexema(TokenType.CerrarLlave, "(\\}).*"));
+            this.tokens.add(new Lexema(TokenType.Spacecruiser, "\\b(\\d{1,9}\\.\\d{1,32})\\b.*"));
+            this.tokens.add(new Lexema(TokenType.Reservadas, "Yes|Cake|Mahman|Summer|Spacecruiser|Jerry|Schezwan|Passthebutter|Adventure|Jellybean|Plumbus|Dead|Alive|Meeseek|Morty|Microverse|Rick"));
+            this.tokens.add(new Lexema(TokenType.Identifier, "([a-zA-Z]{1}[0-9a-zA-Z_]{0,31})*"));
+            this.tokens.add(new Lexema(TokenType.Spacecruiser, "\\b(Morty|Spacecrusier)\\b.*"));
+            this.tokens.add(new Lexema(TokenType.Tab, "(\\t).*"));
+            this.tokens.add(new Lexema(TokenType.Enter, "\n"));
+            this.tokens.add(new Lexema(TokenType.Point, "(\\.).*"));
+            this.tokens.add(new Lexema(TokenType.Plus, "(\\+{1}).*"));
+            this.tokens.add(new Lexema(TokenType.PlusPlus, "(\\+{2}).*"));
+            this.tokens.add(new Lexema(TokenType.Minus, "(\\-{1}).*"));
+            this.tokens.add(new Lexema(TokenType.MinusMinus, "(\\-{1}).*"));
+            this.tokens.add(new Lexema(TokenType.Multiply, "(\\*).*"));
+            this.tokens.add(new Lexema(TokenType.Divide, "(/).*"));
+            this.tokens.add(new Lexema(TokenType.Module, "(\\%).*"));
+            this.tokens.add(new Lexema(TokenType.EqualEqual, "(==).*"));
+            this.tokens.add(new Lexema(TokenType.Equal, "(=).*"));
+            this.tokens.add(new Lexema(TokenType.ExclameEqual, "(\\!=).*"));
+            this.tokens.add(new Lexema(TokenType.Greater, "(>).*"));
+            this.tokens.add(new Lexema(TokenType.Less, "(<).*"));
+            this.tokens.add(new Lexema(TokenType.LessEqual, "(<=).*"));
+            this.tokens.add(new Lexema(TokenType.GreaterEqual, "(>=).*"));
+            this.tokens.add(new Lexema(TokenType.Summer, ("\"(.*?)\"")));
+            this.tokens.add(new Lexema(TokenType.Constante, ("-?[0-9]+")));
 
     }
-
 }
