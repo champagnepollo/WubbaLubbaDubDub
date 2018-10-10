@@ -3,6 +3,7 @@ package com.company;
 
 
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+import sun.jvm.hotspot.debugger.cdbg.Sym;
 
 import javax.sound.midi.SysexMessage;
 import java.io.File;
@@ -38,6 +39,7 @@ public class Lexical {
 
                     if(token.matches(tokenizer.tokens.get(a).r)){
                         System.out.println(token + " | " + tokenizer.tokens.get(a).t);
+                        Symbols.table.put(token, tokenizer.tokens.get(a).t);
                         found = true;
                         break;
                     }
