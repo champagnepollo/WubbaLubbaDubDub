@@ -4,8 +4,10 @@ package com.company;
 
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
+import javax.sound.midi.SysexMessage;
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,20 +26,24 @@ public class Lexical {
             String tmp = "";
             for(int i = 0; i < size; i++){
                 char character = (char)fis.read();
-                //System.out.println("Character: " + character);
-                if(character != ' ' && character != ';') tmp += character;
-                //System.out.println("Temp: " + tmp);
-                if((character == ' ' || character == ';' ) && tmp.length() != 0){
-                    //System.out.println("Entro:" + tmp);
-                    for(int a = 0; a < tokenizer.tokens.size(); a++){
-                        if(tmp.matches(tokenizer.tokens.get(a).r)){
-                            System.out.println(tmp+" | " + tokenizer.tokens.get(a).t);
-                            Symbols.table.put(tmp, tokenizer.tokens.get(a).t);
-                            tmp = "";
-                            break;
-                        }
+                tmp += character;
+
+            }
+            StringTokenizer t = new StringTokenizer(tmp);
+
+            while(t.hasMoreTokens()){
+                String token = t.nextToken();
+                Boolean found = false;
+                for(int a = 0; a < tokenizer.tokens.size(); a++){
+
+                    if(token.matches(tokenizer.tokens.get(a).r)){
+                        System.out.println(token + " | " + tokenizer.tokens.get(a).t);
+                        found = true;
+                        break;
                     }
                 }
+                if(!found) System.out.println("Error lexico: '" + token + "' no reconocido");
+
             }
 
         }catch (Exception e) {
