@@ -1,10 +1,13 @@
 package com.company;
 
 
+
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Lexical {
 
@@ -17,28 +20,24 @@ public class Lexical {
             Tokenizer tokenizer = new Tokenizer();
 
             int size = fis.available();
-            System.out.print("Size of chars:" + size);
+            //System.out.print("Size of chars:" + size);
             String tmp = "";
             for(int i = 0; i < size; i++){
                 char character = (char)fis.read();
-                System.out.println("Character: " + character);
-                if(character != ' ') tmp += character;
-                System.out.println("Temp: " + tmp);
-
-                if(character == ' '){
-                    if(tokenizer.contains(tmp)){
-                        //Agregarlo a la lista de simbolos
-                        System.out.println("Token identificado");
-                        tmp = "";
-                        continue;
-                    }else{
-                        System.out.println("Token no definido");
-
+                //System.out.println("Character: " + character);
+                if(character != ' ' && character != ';') tmp += character;
+                //System.out.println("Temp: " + tmp);
+                if((character == ' ' || character == ';' ) && tmp.length() != 0){
+                    //System.out.println("Entro:" + tmp);
+                    for(int a = 0; a < tokenizer.tokens.size(); a++){
+                        if(tmp.matches(tokenizer.tokens.get(a).r)){
+                            System.out.println(tmp+" | " + tokenizer.tokens.get(a).t);
+                            Symbols.table.put(tmp, tokenizer.tokens.get(a).t);
+                            tmp = "";
+                            break;
+                        }
                     }
                 }
-
-
-
             }
 
         }catch (Exception e) {
