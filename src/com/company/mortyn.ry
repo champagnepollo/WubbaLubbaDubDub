@@ -1,3 +1,2 @@
-Rick(){
-    Morty x = 5*4;
-}
+
+Morty x ;

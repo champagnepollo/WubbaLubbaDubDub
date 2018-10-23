@@ -2,9 +2,15 @@ package com.company;
 
 public class Main {
 
+    //Se arranca el programa.
     public static void main(String[] args) {
-	// write your code here
+        //Aquí se lee el archivo a analizar.
         Lexical l = new Lexical();
-        l.analize("/home/luis/Documents/WubbaLubbaDubDub/WubbaLubbaDubDub/src/com/company/mortyn.ry");
+
+        //Aquí se corre el análisis sintáctico
+        Syntactic si = new Syntactic();
+
+        l.analize("C:/Programming/IntelliJ/Projects/WubbaLubbaDubDub/src/com/company/mortyn.ry");
+        si.syntacticReadFile();
     }
 }

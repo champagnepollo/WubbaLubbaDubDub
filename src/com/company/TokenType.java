@@ -17,6 +17,7 @@ public enum TokenType {
     Dead,
     Jerry,
     Schezwan,
+    Tipo,
     Yes,
     Mahman,
     Passthebutter,
