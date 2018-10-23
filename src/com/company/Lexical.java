@@ -6,6 +6,8 @@ import java.util.StringTokenizer;
 
 public class Lexical {
     private String file;
+
+    //Función para leer el archivo a analizar por cada una de las letras colocándolas en un arreglo llamado "file".
     private void readFile(String path) {
         try {
             FileInputStream fis = new FileInputStream(new File(path));
@@ -20,20 +22,26 @@ public class Lexical {
             System.out.print(e.toString());
         } finally {
         }
-    }
+    }//"file" se utiliza para el analizador léxico en la función analize.
 
+    //Esta función manda llamar a readFile y con "file" comienza el análisis utilizando StringTokenizer.
     public void analize(String path){
 
         this.readFile(path);
 
         StringTokenizer t = new StringTokenizer(this.file, "=;(){}\n ", true);
+
+        //Sse llama la clase que tiene TODA la gramática.
         Tokenizer tokenizer = new Tokenizer();
 
         while(t.hasMoreTokens()){
                 String token = t.nextToken();
                 Boolean found = false;
+
+                //Ciclará hasta tener un token que coincida.
                 for(int a = 0; a < tokenizer.tokens.size(); a++){
 
+                    //Compara para ver si algo coincide.
                     if(token.matches(tokenizer.tokens.get(a).r)){
                         System.out.println(token + " | " + tokenizer.tokens.get(a).t);
                         Symbols.table.put(token, tokenizer.tokens.get(a).t);
@@ -42,6 +50,6 @@ public class Lexical {
                     }
                 }
                 if(!found) System.out.println("Error lexico: '" + token + "' no reconocido");
-            }
-    }
+        }
+    }//Este método devuelve la tabla de símbolos para el analizador sintáctico.
 }
