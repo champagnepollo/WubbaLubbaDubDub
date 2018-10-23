@@ -26,7 +26,7 @@ public class Lexical {
 
         this.readFile(path);
 
-        StringTokenizer t = new StringTokenizer(this.file, "=;(){}\n ", true);
+        StringTokenizer t = new StringTokenizer(this.file, "*+-/=;(){}\n ", true);
         Tokenizer tokenizer = new Tokenizer();
 
         while(t.hasMoreTokens()){
