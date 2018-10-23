@@ -22,7 +22,7 @@ public class Tokenizer {
             this.tokens.add(new Lexema(TokenType.Identifier, "([a-zA-Z]{1}[0-9a-zA-Z_]{0,31})*"));
             this.tokens.add(new Lexema(TokenType.Spacecruiser, "\\b(Morty|Spacecrusier)\\b.*"));
             this.tokens.add(new Lexema(TokenType.Tab, "(\\t).*"));
-            this.tokens.add(new Lexema(TokenType.Enter, "\n"));
+            this.tokens.add(new Lexema(TokenType.Enter, "\\n"));
             this.tokens.add(new Lexema(TokenType.Point, "(\\.).*"));
             this.tokens.add(new Lexema(TokenType.Plus, "(\\+{1}).*"));
             this.tokens.add(new Lexema(TokenType.PlusPlus, "(\\+{2}).*"));
