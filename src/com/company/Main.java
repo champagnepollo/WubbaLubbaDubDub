@@ -10,7 +10,7 @@ public class Main {
         //Aquí se corre el análisis sintáctico
         Syntactic si = new Syntactic();
 
-        l.analize("C:/Programming/IntelliJ/Projects/WubbaLubbaDubDub/src/com/company/mortyn.ry");
+        l.analize("/home/luis/Documents/WubbaLubbaDubDub/WubbaLubbaDubDub/src/com/company/mortyn.ry");
         si.syntacticReadFile();
     }
 }

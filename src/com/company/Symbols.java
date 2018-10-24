@@ -7,6 +7,6 @@ import java.util.Map;
 public class Symbols {
 
     //Esta es la tabla de simbolos que utiliza el analizador Sintáctico
-    public static Map<String, TokenType> table = new HashMap<String, TokenType>();
+    public static ArrayList<Lexema> table = new ArrayList<Lexema>();
 
 }

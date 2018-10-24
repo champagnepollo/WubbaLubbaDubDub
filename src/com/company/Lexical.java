@@ -42,7 +42,7 @@ public class Lexical {
                     //Compara para ver si algo coincide.
                     if(token.matches(tokenizer.tokens.get(a).r)){
                         System.out.println(token + " | " + tokenizer.tokens.get(a).t);
-                        Symbols.table.put(token, tokenizer.tokens.get(a).t);
+                        Symbols.table.add(new Lexema( tokenizer.tokens.get(a).t,token));
                         found = true;
                         break;
                     }

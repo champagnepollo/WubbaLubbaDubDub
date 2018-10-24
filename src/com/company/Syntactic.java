@@ -1,33 +1,59 @@
 package com.company;
 
+import sun.awt.Symbol;
+
 public class Syntactic {
 
     //Este método análiza sintácticamente la lista del analizador léxico.
     public void syntacticReadFile(){
+        int simCounter = 0;
+        boolean declaracion = true;
+        boolean isChecked = true;
+        for(int i = 0; i < Symbols.table.size(); i++){
 
-        TokenType value = Symbols.table.get("Morty");
-        String revisar = value.toString();
-        System.out.println(revisar);
-        TokenType value2 = Symbols.table.get("x");
-        revisar += ("+" + value2.toString());
-        System.out.println(revisar);
-        /*TokenType value3 = Symbols.table.get("=");
-        revisar += ("+" + value3.toString());
-        System.out.println(revisar);
-        TokenType value4 = Symbols.table.get("3");
-        revisar += ("+" + value4.toString());
-        System.out.println(revisar);*/
-        TokenType value5 = Symbols.table.get(";");
-        revisar += ("+" + value5.toString());
-        System.out.println(revisar);
+            if(Symbols.table.get(i).t != TokenType.Espacio ){
+                isChecked = true;
+                if(simCounter == 0){
+                    if(Symbols.table.get(i).t == TokenType.Tipo){
+                        simCounter++;
+                        isChecked = false;
+                        System.out.println("Primero");
+                    }else{
+                        declaracion = false;
+                        System.out.println(declaracion);
+                    }
+                }
+                if(simCounter == 1 && isChecked){
+                    if(Symbols.table.get(i).t == TokenType.Identifier ){
+                        simCounter++;
+                        isChecked = false;
+                        System.out.println("Segundo");
+                    }else{
+                        declaracion = false;
+                        System.out.println(declaracion);
+                    }
+                }
+                if(simCounter == 2 && isChecked){
+                    if(Symbols.table.get(i).t == TokenType.PuntoyComa){
+                        simCounter = 0;
+                        System.out.println("Tercero");
+                        break;
 
-        //Declaración
-        if(revisar.equals("Tipo+Identifier+PuntoyComa")) {
-            System.out.println("Declaración");
-            if (revisar.equals("Tipo+Identifier+Equal+Constante+PuntoyComa")) {
-                System.out.println("Declaración");
+                    }else{
+                        declaracion = false;
+                        System.out.println(declaracion);
+                    }
+                }
             }
         }
+
+        if(declaracion){
+            System.out.println("Declaracion");
+        }else
+            {
+                System.out.println("No es declaracion");
+            }
+
     }
 
     /* ~~~~Gramática~~~~
