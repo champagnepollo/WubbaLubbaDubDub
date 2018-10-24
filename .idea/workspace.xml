@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/com/company/Syntactic.java" line="13" mnemonic="7" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6807f802-3a67-4241-8e20-6d8f335e92b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6807f802-3a67-4241-8e20-6d8f335e92b7" name="Default Changelist" comment="Prueba 1, Analizador Sintáctico">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Lexical.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Lexical.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/mortyn.ry" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/mortyn.ry" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Lexema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Lexema.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Lexical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Lexical.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Symbols.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Symbols.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Lexema.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Lexema.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Symbols.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Symbols.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Tokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Tokenizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Syntactic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Syntactic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TokenType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TokenType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Tokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Tokenizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/mortyn.ry" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/mortyn.ry" afterDir="false" />
     </list>
@@ -129,14 +129,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1870" />
-          <entry key="ry" value="13" />
+          <entry key="java" value="1942" />
+          <entry key="ry" value="15" />
+          <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1870" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="JAVA" value="1942" />
+          <entry key="PLAIN_TEXT" value="46" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -147,16 +155,16 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Syntactic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+            <state relative-caret-position="353">
+              <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -165,7 +173,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Lexical.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
-              <caret line="46" column="61" lean-forward="true" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+              <caret line="46" column="47" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,7 +185,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/mortyn.ry">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -186,7 +194,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Token.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -198,17 +206,17 @@
               <caret line="9" column="60" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#256#275#0" expanded="true" />
+                <element signature="e#255#274#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Tokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            <state relative-caret-position="187">
+              <caret line="30" column="71" lean-forward="true" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -217,7 +225,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Lexema.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -225,8 +233,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TokenType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="323">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -251,12 +259,12 @@
         <option value="$PROJECT_DIR$/src/Symbols.java" />
         <option value="$PROJECT_DIR$/src/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/com/company/Token.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TokenType.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/com/company/Lexical.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Symbols.java" />
         <option value="$PROJECT_DIR$/src/com/company/Lexema.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Tokenizer.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TokenType.java" />
         <option value="$PROJECT_DIR$/src/com/company/mortyn.ry" />
         <option value="$PROJECT_DIR$/src/com/company/Syntactic.java" />
       </list>
@@ -269,9 +277,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="260" />
+    <option name="y" value="22" />
+    <option name="width" value="1400" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -279,6 +288,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,143 +312,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540337496758" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540337717543" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.company" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/Lexical.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/Main.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/Tokenizer.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Lexema.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Lexical.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Main.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Symbols.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Token.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/TokenType.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Tokenizer.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/mortyn.ry</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/TokenType.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/mortyn.ry</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -488,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539137780502</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Prueba 1, Analizador Sintáctico">
+      <created>1540337589109</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540337589109</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -498,7 +390,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17776097" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18003026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -566,61 +458,41 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 2 estable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 2 estable" />
+    <MESSAGE value="Prueba 1, Analizador Sintáctico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prueba 1, Analizador Sintáctico" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WubbaLubbaDubDub.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TokenType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Lexical.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
-          <caret line="46" column="61" lean-forward="true" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/mortyn.ry">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Token.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Lexema.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Tokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -630,15 +502,36 @@
           <caret line="9" column="60" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#256#275#0" expanded="true" />
+            <element signature="e#255#274#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/mortyn.ry">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Syntactic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        <state relative-caret-position="353">
+          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Lexema.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Tokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="30" column="71" lean-forward="true" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
         </state>
       </provider>
     </entry>

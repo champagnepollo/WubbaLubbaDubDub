@@ -19,7 +19,8 @@ public class Tokenizer {
             this.tokens.add(new Lexema(TokenType.AbrirLlave, "(\\{).*"));
             this.tokens.add(new Lexema(TokenType.CerrarLlave, "(\\}).*"));
             this.tokens.add(new Lexema(TokenType.Spacecruiser, "\\b(\\d{1,9}\\.\\d{1,32})\\b.*"));
-            this.tokens.add(new Lexema(TokenType.Reservadas, "Yes|Cake|Mahman|Summer|Spacecruiser|Jerry|Schezwan|Passthebutter|Adventure|Jellybean|Plumbus|Dead|Alive|Meeseek|Morty|Microverse|Rick"));
+            this.tokens.add(new Lexema(TokenType.Reservadas, "Yes|Cake|Mahman|Jerry|Schezwan|Passthebutter|Adventure|Jellybean|Plumbus|Dead|Alive|Rick"));
+            this.tokens.add(new Lexema(TokenType.Tipo, "Summer|Meeseek|Morty|Microverse|Spacecruiser"));
             this.tokens.add(new Lexema(TokenType.Identifier, "([a-zA-Z]{1}[0-9a-zA-Z_]{0,31})*"));
             this.tokens.add(new Lexema(TokenType.Spacecruiser, "\\b(Morty|Spacecrusier)\\b.*"));
             this.tokens.add(new Lexema(TokenType.Tab, "(\\t).*"));

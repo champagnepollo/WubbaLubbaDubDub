@@ -11,20 +11,23 @@ public class Syntactic {
         TokenType value2 = Symbols.table.get("x");
         revisar += ("+" + value2.toString());
         System.out.println(revisar);
-        TokenType value3 = Symbols.table.get("=");
+        /*TokenType value3 = Symbols.table.get("=");
         revisar += ("+" + value3.toString());
         System.out.println(revisar);
         TokenType value4 = Symbols.table.get("3");
         revisar += ("+" + value4.toString());
-        System.out.println(revisar);
+        System.out.println(revisar);*/
         TokenType value5 = Symbols.table.get(";");
         revisar += ("+" + value5.toString());
         System.out.println(revisar);
 
-        if(revisar == "Reservadas+Identifier+Equal+Constante+PuntoyComa"){
+        //Declaración
+        if(revisar.equals("Tipo+Identifier+PuntoyComa")) {
             System.out.println("Declaración");
+            if (revisar.equals("Tipo+Identifier+Equal+Constante+PuntoyComa")) {
+                System.out.println("Declaración");
+            }
         }
-
     }
 
     /* ~~~~Gramática~~~~
