@@ -1,6 +1,5 @@
 package com.company;
 
-import sun.awt.Symbol;
 
 public class Syntactic {
 
