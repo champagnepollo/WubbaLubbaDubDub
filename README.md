@@ -12,6 +12,6 @@ El compilador cuenta con 3 partes:
 
 # Contribuidores
 
-Luis Ramirez
-Cedrick Rosa
-Kevin Madrid
+- Luis Ramirez
+- Cedrick Rosa
+- Kevin Madrid
