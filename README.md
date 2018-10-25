@@ -2,15 +2,15 @@
 
 WubbaLubbaDubDub es un compilador inspirado en la serie Rick & Morty
 
-##Compilador
+## Compilador
 
 El compilador cuenta con 3 partes:
 
--Analizador Lexico
--Analizador Sintactico
--Analizador Semantico
+- Analizador Lexico
+- Analizador Sintactico
+- Analizador Semantico
 
-#Contribuidores
+# Contribuidores
 
 Luis Ramirez
 Cedrick Rosa
