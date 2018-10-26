@@ -7,7 +7,7 @@ import java.util.Map;
 public class Symbols {
 
     //Esta es la tabla de simbolos que utiliza el analizador Sintáctico
-    public static ArrayList<Lexema> table = new ArrayList<Lexema>();
+    public static ArrayList<Token> table = new ArrayList<Token>();
 
     // If space or enter IGNORE
     public static void addToken(TokenType t, String lexema){
@@ -16,7 +16,7 @@ public class Symbols {
             return;
         }
 
-        Symbols.table.add( new Lexema( t, lexema ) );
+        Symbols.table.add( new Token( t, lexema ) );
 
     }
 
