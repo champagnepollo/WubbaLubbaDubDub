@@ -33,21 +33,24 @@ public class Lexical {
         Tokenizer tokenizer = new Tokenizer();
 
         while(t.hasMoreTokens()){
-                String token = t.nextToken();
+                String lexema = t.nextToken();
                 Boolean found = false;
 
                 //Ciclará hasta tener un token que coincida.
                 for(int a = 0; a < tokenizer.tokens.size(); a++){
 
                     //Compara para ver si algo coincide.
-                    if(token.matches(tokenizer.tokens.get(a).r)){
-                        System.out.println(token + " | " + tokenizer.tokens.get(a).t);
-                        Symbols.table.add(new Lexema( tokenizer.tokens.get(a).t,token));
+                    if(lexema.matches(tokenizer.tokens.get(a).r)){
+                        System.out.println(lexema + " | " + tokenizer.tokens.get(a).t);
+
+
+                        Symbols.addToken( tokenizer.tokens.get(a).t, lexema );
+
                         found = true;
                         break;
                     }
                 }
-                if(!found) System.out.println("Error lexico: '" + token + "' no reconocido");
+                if(!found) System.out.println("Error lexico: '" + lexema + "' no reconocido");
         }
     }//Este método devuelve la tabla de símbolos para el analizador sintáctico.
 }

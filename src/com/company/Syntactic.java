@@ -4,13 +4,12 @@ package com.company;
 public class Syntactic {
 
     //Este método análiza sintácticamente la lista del analizador léxico.
-    public void syntacticReadFile(){
+    public void analize(){
         int simCounter = 0;
         boolean declaracion = true;
         boolean isChecked = true;
         for(int i = 0; i < Symbols.table.size(); i++){
 
-            if(Symbols.table.get(i).t != TokenType.Espacio ){
                 isChecked = true;
                 if(simCounter == 0){
                     if(Symbols.table.get(i).t == TokenType.Tipo){
@@ -43,7 +42,7 @@ public class Syntactic {
                         System.out.println(declaracion);
                     }
                 }
-            }
+
         }
 
         if(declaracion){
