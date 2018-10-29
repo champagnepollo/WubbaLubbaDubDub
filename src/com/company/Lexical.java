@@ -40,11 +40,11 @@ public class Lexical {
                 for(int a = 0; a < tokenizer.tokens.size(); a++){
 
                     //Compara para ver si algo coincide.
-                    if(lexema.matches(tokenizer.tokens.get(a).r)){
-                        System.out.println(lexema + " | " + tokenizer.tokens.get(a).t);
+                    if(lexema.matches(tokenizer.tokens.get(a).lexema)){
+                        System.out.println(lexema + " | " + tokenizer.tokens.get(a).token);
 
 
-                        Symbols.addToken( tokenizer.tokens.get(a).t, lexema );
+                        Symbols.addToken( tokenizer.tokens.get(a).token, lexema );
 
                         found = true;
                         break;

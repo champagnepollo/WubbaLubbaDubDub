@@ -6,7 +6,6 @@ public class Tokenizer {
 
     public ArrayList<Token> tokens;
 
-    //Se crea una lista de tokens que tiene como parámetros la clase Lexema (tipo de token y string). Aquí está nuestra gramática también.
     public Tokenizer() {
             this.tokens = new ArrayList<Token>();
             this.tokens.add(new Token(TokenType.Comentario, "(//(.*?)[\r$]?\n).*"));

@@ -7,7 +7,7 @@ public class Compiler {
        Lexical l = new Lexical();
        Syntactic si = new Syntactic();
 
-        l.analize(System.getProperty("user.dir") + "/src/com/company/mortyn.ry");
-        si.analize();
+       l.analize(System.getProperty("user.dir") + "/src/com/company/mortyn.ry");
+       si.analize();
     }
 }
