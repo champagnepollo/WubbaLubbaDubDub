@@ -1,6 +1,7 @@
 package com.company;
 
 
+
 public class Syntactic {
 
     //Este método análiza sintácticamente la lista del analizador léxico.
@@ -16,62 +17,31 @@ public class Syntactic {
 
         if( !checkEntry( mainIndex ) ){
             System.out.println("Rick function error in definition!");
-            System.out.println("Excepctiong: <TYPE> Rick(){");
-
+            System.out.println("Excepctiong: <TYPE> Rick(){}");
             System.exit(-1);
+        }
 
+        if( countBrackets() != 0 ){
+            System.out.println("Missing Brackets!");
+            System.exit(-1);
         }
 
 
+        int p = EntryBracketAt( mainIndex );
+
+        analize( p, Symbols.table.size() );
 
 
-        int simCounter = 0;
-        boolean declaracion = true;
-        boolean isChecked = true;
-        for(int i = 0; i < Symbols.table.size(); i++){
+    }
 
-                isChecked = true;
-                if(simCounter == 0){
-                    if(Symbols.table.get(i).token == TokenType.Tipo){
-                        simCounter++;
-                        isChecked = false;
-                        System.out.println("Primero");
-                    }else{
-                        declaracion = false;
-                        System.out.println(declaracion);
-                    }
-                }
-                if(simCounter == 1 && isChecked){
-                    if(Symbols.table.get(i).token == TokenType.Identifier ){
-                        simCounter++;
-                        isChecked = false;
-                        System.out.println("Segundo");
-                    }else{
-                        declaracion = false;
-                        System.out.println(declaracion);
-                    }
-                }
-                if(simCounter == 2 && isChecked){
-                    if(Symbols.table.get(i).token == TokenType.PuntoyComa){
-                        simCounter = 0;
-                        System.out.println("Tercero");
-                        break;
-
-                    }else{
-                        declaracion = false;
-                        System.out.println(declaracion);
-                    }
-                }
-
-        }
-
-        if(declaracion){
-            System.out.println("Declaracion");
-        }else
-            {
-                System.out.println("No es declaracion");
+    private int EntryBracketAt( int mainIndex ){
+        int e = 0;
+        for(int i = mainIndex; i < Symbols.table.size(); i++){
+            if( Symbols.table.get(i).token == TokenType.AbrirLlave ){
+                e = i;
             }
-
+        }
+        return e;
     }
 
     private boolean checkEntry(int mainIndex) {
@@ -96,6 +66,19 @@ public class Syntactic {
 
     }
 
+    private int countBrackets( ){
+
+        int counter = 0;
+
+        for( int i = 0; i < Symbols.table.size(); i++ ){
+
+            if( Symbols.table.get(i).token == TokenType.AbrirLlave )
+                counter++;
+            else if( Symbols.table.get( i ).token == TokenType.CerrarLlave )
+                counter--;
+        }
+        return counter;
+    }
     private int EntryAt() {
 
         int entryIndex = -1;
@@ -109,6 +92,23 @@ public class Syntactic {
         }
 
         return entryIndex;
+
+    }
+
+
+    public void analize(int startIndex, int endIndex){
+
+        for (int i = startIndex + 1; i < endIndex; i++){
+
+
+            if( Symbols.table.get(i).token == TokenType.Tipo ){
+
+
+            }
+
+
+
+        }
 
     }
 
