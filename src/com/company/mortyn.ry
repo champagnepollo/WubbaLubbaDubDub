@@ -1,13 +1,11 @@
-
 Morty Rick(){
 
     Morty x;
+    Morty y;
 
-    Morty x = 4;
+    Yes ( x >= y ) {
 
-    cond(oper_log){sent}
-
-    Yes(x == 3){
-        x = 1;
+        Morty x;
     }
+
 }

@@ -1,7 +1,6 @@
 package com.company;
 
 
-import javax.sound.midi.SysexMessage;
 import java.util.ArrayList;
 
 public class Syntactic {
@@ -30,20 +29,22 @@ public class Syntactic {
 
 
         int p = EntryBracketAt( mainIndex );
-
+        System.out.println(p);
+        System.out.println(Symbols.table.size());
         analize( p, Symbols.table.size() );
 
 
     }
 
     private int EntryBracketAt( int mainIndex ){
-        int e = 0;
         for(int i = mainIndex; i < Symbols.table.size(); i++){
             if( Symbols.table.get(i).token == TokenType.AbrirLlave ){
-                e = i;
+
+                return i;
+
             }
         }
-        return e;
+        return -1;
     }
 
     private boolean checkEntry(int mainIndex) {
@@ -106,7 +107,7 @@ public class Syntactic {
 
             this.decl(tokens);
             this.asign(tokens);
-            
+
         }else if( tokens.get(0).token == TokenType.Condition ){
             this.cond(tokens);
         }
@@ -115,29 +116,104 @@ public class Syntactic {
 
     private void cond(ArrayList<Token> tokens) {
 
+        if( tokens.get(0).token == TokenType.Condition ){
+
+            if( tokens.get(1).token == TokenType.AbrirParentesis ){
+
+                ArrayList<Token> tmp = new ArrayList<>();
+                tmp.add( tokens.get(2) );
+                tmp.add( tokens.get(3) );
+                tmp.add( tokens.get(4) );
+
+
+                if( oper_l(tmp) ){
+
+                    tmp.clear();
+                    System.out.println("Operador Logico validado");
+
+                    if( tokens.get(5).token == TokenType.CerrarParentesis ){
+
+                        if(tokens.get(6).token == TokenType.AbrirLlave){
+
+
+                            for( int i = 7; i < tokens.size(); i++ ){
+
+                                tmp.add(tokens.get(i));
+                            }
+                            System.out.println("Se cumplio el condicional");
+                            sent(tmp);
+                            tmp.clear();
+
+                        }
+
+                    }
+
+
+
+
+                }else{
+                    System.out.println("Expecting Logical Operation");
+                    System.exit(-1);
+
+                }
+
+            }
+
+        }
+
     }
 
-    private void oper_l(ArrayList<Token> tokens) {
+    private boolean oper_l(ArrayList<Token> tokens) {
 
+        if( var(tokens.get(0)) ){
+            if( oper_rel( tokens.get(1) ) ){
+                if( var( tokens.get(2) ) ){
+                    System.out.println(" Operador Logico ");
+                    return true;
+                }
+            }
+        }
+        return false;
 
     }
 
+    private boolean oper_rel( Token t){
 
-    private void loop(ArrayList<Token> tokens) {
+
+        if(t.token == TokenType.Greater || t.token == TokenType.Less || t.token == TokenType.GreaterEqual || t.token == TokenType.LessEqual ||
+        t.token == TokenType.EqualEqual || t.token == TokenType.ExclameEqual) return true;
+
+        return false;
+
     }
-    private void decl(ArrayList<Token> tokens) {
+
+    private boolean var( Token t ){
+
+        if( t.token == TokenType.Identifier || t.token == TokenType.Constante || t.token == TokenType.Boolean ){
+            return true;
+        }
+        return false;
+    }
+
+
+    private boolean loop(ArrayList<Token> tokens) {
+        return false;
+    }
+    private boolean decl(ArrayList<Token> tokens) {
         if( tokens.get(0).token == TokenType.Tipo ){
 
             if( tokens.get(1).token == TokenType.Identifier ){
 
                 if( tokens.get(2).token == TokenType.PuntoyComa ){
-                    System.out.println("Declaracion");
+                    System.out.println("decl");
+                    return true;
                 }
             }
         }
+        return false;
     }
 
-    private void asign(ArrayList<Token> tokens) {
+    private boolean asign(ArrayList<Token> tokens) {
         if( tokens.get(0).token == TokenType.Tipo ){
 
             if( tokens.get(1).token == TokenType.Identifier ){
@@ -146,7 +222,7 @@ public class Syntactic {
 
 
                         if( tokens.get(4).token == TokenType.PuntoyComa ){
-                            System.out.println("Asignacion");
+                            return true;
                         }
 
                     }
@@ -155,6 +231,7 @@ public class Syntactic {
 
             }
         }
+        return false;
     }
 
     public void analize(int startIndex, int endIndex){
@@ -169,15 +246,13 @@ public class Syntactic {
             if( Symbols.table.get(i).token == TokenType.PuntoyComa ){
 
                 sent(tmp);
-
                 tmp.clear();
 
             }
 
-            if( Symbols.table.get(i).token == TokenType.CerrarLlave ){
+            else if( Symbols.table.get(i).token == TokenType.CerrarLlave ){
 
                 sent(tmp);
-
                 tmp.clear();
 
             }

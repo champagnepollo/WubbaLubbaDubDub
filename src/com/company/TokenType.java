@@ -19,6 +19,7 @@ public enum TokenType {
     Schezwan,
     Tipo,
     Condition,
+    Boolean,
     Yes,
     Mahman,
     Passthebutter,

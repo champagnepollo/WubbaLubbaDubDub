@@ -19,6 +19,7 @@ public class Tokenizer {
             this.tokens.add(new Token(TokenType.CerrarLlave, "(\\}).*"));
             this.tokens.add(new Token(TokenType.Spacecruiser, "\\b(\\d{1,9}\\.\\d{1,32})\\b.*"));
             this.tokens.add(new Token(TokenType.Condition, "Yes"));
+            this.tokens.add(new Token(TokenType.Boolean, "Alive|Dead"));
             this.tokens.add(new Token(TokenType.Reservadas, "Yes|Cake|Mahman|Jerry|Schezwan|Passthebutter|Adventure|Jellybean|Plumbus|Dead|Alive|Rick"));
             this.tokens.add(new Token(TokenType.Tipo, "Summer|Meeseek|Morty|Microverse|Spacecruiser"));
             this.tokens.add(new Token(TokenType.Identifier, "([a-zA-Z]{1}[0-9a-zA-Z_]{0,31})*"));

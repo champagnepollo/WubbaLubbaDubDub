@@ -28,7 +28,7 @@ public class Lexical {
     public void analize(String path){
 
         this.readFile(path);
-        StringTokenizer t = new StringTokenizer(this.file, "*+-/=;(){}\n ", true);
+        StringTokenizer t = new StringTokenizer(this.file, "*+-/;(){}\n ", true);
 
         Tokenizer tokenizer = new Tokenizer();
 
