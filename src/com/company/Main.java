@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Compiler.compile();
+        Compiler.AtLeastTry();
 
     }
 }

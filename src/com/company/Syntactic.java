@@ -33,7 +33,6 @@ public class Syntactic {
         System.out.println(Symbols.table.size());
         analize( p, Symbols.table.size() );
 
-
     }
 
     private int EntryBracketAt( int mainIndex ){
@@ -99,17 +98,18 @@ public class Syntactic {
     }
 
 
-
-
     private void sent(ArrayList<Token> tokens) {
-        //Debe checar todas la reglas gramaticales y ver cuales aplican
         if( tokens.get(0).token == TokenType.Tipo ){
 
+            this.assign(tokens);
             this.decl(tokens);
-            this.asign(tokens);
 
         }else if( tokens.get(0).token == TokenType.Condition ){
             this.cond(tokens);
+        }else{
+
+            this.loop(tokens);
+
         }
 
     }
@@ -125,31 +125,25 @@ public class Syntactic {
                 tmp.add( tokens.get(3) );
                 tmp.add( tokens.get(4) );
 
-
                 if( oper_l(tmp) ){
 
                     tmp.clear();
-                    System.out.println("Operador Logico validado");
 
                     if( tokens.get(5).token == TokenType.CerrarParentesis ){
 
                         if(tokens.get(6).token == TokenType.AbrirLlave){
 
-
                             for( int i = 7; i < tokens.size(); i++ ){
 
                                 tmp.add(tokens.get(i));
                             }
-                            System.out.println("Se cumplio el condicional");
+                            System.out.println("cond");
                             sent(tmp);
                             tmp.clear();
 
                         }
 
                     }
-
-
-
 
                 }else{
                     System.out.println("Expecting Logical Operation");
@@ -168,7 +162,7 @@ public class Syntactic {
         if( var(tokens.get(0)) ){
             if( oper_rel( tokens.get(1) ) ){
                 if( var( tokens.get(2) ) ){
-                    System.out.println(" Operador Logico ");
+                    System.out.println("oper_l");
                     return true;
                 }
             }
@@ -178,7 +172,6 @@ public class Syntactic {
     }
 
     private boolean oper_rel( Token t){
-
 
         if(t.token == TokenType.Greater || t.token == TokenType.Less || t.token == TokenType.GreaterEqual || t.token == TokenType.LessEqual ||
         t.token == TokenType.EqualEqual || t.token == TokenType.ExclameEqual) return true;
@@ -195,10 +188,54 @@ public class Syntactic {
         return false;
     }
 
-
     private boolean loop(ArrayList<Token> tokens) {
+
+        if(tokens.get(0).lexema.equals("Passthebutter")){
+
+            if( tokens.get(1).token == TokenType.AbrirParentesis ){
+
+                ArrayList<Token> tmp = new ArrayList<>();
+                tmp.add( tokens.get(2) );
+                tmp.add( tokens.get(3) );
+                tmp.add( tokens.get(4) );
+
+                if(oper_l( tmp )){
+
+                    tmp.clear();
+
+                    if( tokens.get(5).token == TokenType.CerrarParentesis ){
+
+                        if(tokens.get(6).token == TokenType.AbrirLlave){
+
+                            for( int i = 7; i < tokens.size(); i++ ){
+
+                                tmp.add(tokens.get(i));
+                            }
+                            System.out.println("loop");
+                            sent(tmp);
+                            tmp.clear();
+
+                        }
+
+                    }
+
+                }else{
+                    
+                    System.out.println("Expecting Logical Operation");
+                    System.exit(-1);
+
+                }
+
+
+            }
+
+
+
+        }
+
         return false;
     }
+
     private boolean decl(ArrayList<Token> tokens) {
         if( tokens.get(0).token == TokenType.Tipo ){
 
@@ -213,7 +250,7 @@ public class Syntactic {
         return false;
     }
 
-    private boolean asign(ArrayList<Token> tokens) {
+    private boolean assign(ArrayList<Token> tokens) {
         if( tokens.get(0).token == TokenType.Tipo ){
 
             if( tokens.get(1).token == TokenType.Identifier ){
@@ -222,8 +259,9 @@ public class Syntactic {
 
 
                         if( tokens.get(4).token == TokenType.PuntoyComa ){
+                            System.out.println("assign");
                             return true;
-                        }
+                         }
 
                     }
 
@@ -256,8 +294,6 @@ public class Syntactic {
                 tmp.clear();
 
             }
-
-
 
         }
 

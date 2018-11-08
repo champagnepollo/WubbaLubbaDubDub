@@ -2,7 +2,7 @@ package com.company;
 
 public class Compiler {
 
-    public static void compile(){
+    public static void AtLeastTry(){
 
        Lexical l = new Lexical();
        Syntactic si = new Syntactic();

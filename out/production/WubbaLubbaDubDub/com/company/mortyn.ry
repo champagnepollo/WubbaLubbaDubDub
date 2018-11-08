@@ -3,9 +3,12 @@ Morty Rick(){
     Morty x;
     Morty y;
 
-    Yes ( x >= y ) {
+    Passthebutter( x <= y ){
 
-        Morty x;
+        Passthebutter( x = y ){
+
+            Morty x;
+        }
     }
 
 }
