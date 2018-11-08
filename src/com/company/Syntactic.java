@@ -1,6 +1,8 @@
 package com.company;
 
 
+import javax.sound.midi.SysexMessage;
+import java.util.ArrayList;
 
 public class Syntactic {
 
@@ -96,24 +98,53 @@ public class Syntactic {
     }
 
 
+
+
+    private void sent(ArrayList<Token> tokens) {
+        //Debe checar todas la reglas gramaticales y ver cuales aplican
+        if( tokens.get(0).token == TokenType.Tipo ){
+
+            this.decl(tokens);
+            //Puede ser decl o asig
+        }
+
+    }
+
+    private void decl(ArrayList<Token> tokens) {
+        if( tokens.get(0).token == TokenType.Tipo ){
+
+            if( tokens.get(1).token == TokenType.Identifier ){
+
+                if( tokens.get(2).token == TokenType.PuntoyComa ){
+                    System.out.println("Declaracion");
+                }
+            }
+        }
+    }
+
     public void analize(int startIndex, int endIndex){
+
+
+        ArrayList<Token> tmp = new ArrayList<>();
 
         for (int i = startIndex + 1; i < endIndex; i++){
 
 
-            if( Symbols.table.get(i).token == TokenType.Tipo ){
+            //Los mete a pila hasta encontrar ;
+            tmp.add(Symbols.table.get(i));
+
+            if( Symbols.table.get(i).token == TokenType.PuntoyComa ){
+
+                sent(tmp);
+
+                tmp.clear();
 
 
             }
-
 
 
         }
 
     }
 
-    /* ~~~~Gramática~~~~
-    Esta es para la clase del martes 23 de Octubre, está Hardcodeado
-    (Declaración de variables) decl °°  (Entero) Reservada + (x) Identifier + (=) Equal + (3) Constante + (;) PuntoyComa
-     */
 }
