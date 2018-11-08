@@ -3,5 +3,5 @@ Morty Rick(){
 
     Morty x;
 
-    Morty x;
+    Morty x = 4;
 }

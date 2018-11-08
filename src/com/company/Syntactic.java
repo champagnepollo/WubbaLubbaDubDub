@@ -105,6 +105,7 @@ public class Syntactic {
         if( tokens.get(0).token == TokenType.Tipo ){
 
             this.decl(tokens);
+            this.asign(tokens);
             //Puede ser decl o asig
         }
 
@@ -118,6 +119,26 @@ public class Syntactic {
                 if( tokens.get(2).token == TokenType.PuntoyComa ){
                     System.out.println("Declaracion");
                 }
+            }
+        }
+    }
+
+    private void asign(ArrayList<Token> tokens) {
+        if( tokens.get(0).token == TokenType.Tipo ){
+
+            if( tokens.get(1).token == TokenType.Identifier ){
+                if( tokens.get(2).token == TokenType.Equal ){
+                    if(tokens.get(3).token == TokenType.Constante){
+
+
+                    if( tokens.get(4).token == TokenType.PuntoyComa ){
+                        System.out.println("Asignacion");
+                    }
+
+                    }
+
+                }
+
             }
         }
     }
