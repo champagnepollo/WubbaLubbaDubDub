@@ -18,6 +18,7 @@ public enum TokenType {
     Jerry,
     Schezwan,
     Tipo,
+    Condition,
     Yes,
     Mahman,
     Passthebutter,

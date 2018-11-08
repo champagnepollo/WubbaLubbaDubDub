@@ -4,4 +4,11 @@ Morty Rick(){
     Morty x;
 
     Morty x = 4;
+
+    cond(oper_log){sent}
+
+    Yes(x == 3){
+        x = 1;
+
+    }
 }
