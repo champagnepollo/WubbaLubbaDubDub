@@ -97,12 +97,39 @@ public class Syntactic {
 
     }
 
+    private boolean op( Token t ){
+
+        if(op_log(t)){
+            return true;
+
+        }else if(oper_a(t)){
+            return true;
+        }else{
+            Errors.add("Not OP found");
+            return false;
+        }
+
+    }
+
+    private boolean oper_a( Token t) {
+
+        if(t.lexema.equals("+") || t.lexema.equals("-") || t.lexema.equals("*") || t.lexema.equals("/") ||
+                t.lexema.equals("++") || t.lexema.equals("--") || t.lexema.equals("%")){
+
+            return true;
+
+        }
+
+        return false;
+    }
 
     private void sent(ArrayList<Token> tokens) {
-        if( tokens.get(0).token == TokenType.Tipo ){
+        if( tokens.get(0).token == TokenType.Tipo || tokens.get(0).token == TokenType.Identifier){
 
-            this.assign(tokens);
-            this.decl(tokens);
+
+            if(!this.decl(tokens)){
+                this.assign(tokens);
+            }
 
         }else if( tokens.get(0).token == TokenType.Condition ){
             this.cond(tokens);
@@ -152,6 +179,40 @@ public class Syntactic {
         }
 
     }
+    private boolean oper( ArrayList<Token> tokens ){
+
+        if( tokens.size() < 3 ){
+            Errors.add("Oper missing tokens");
+            return false;
+        }
+
+        if( this.var(tokens.get(0)) ){
+
+
+            if( this.op( tokens.get(1) ) ){
+
+                if( this.var( tokens.get(2) ) ) {
+
+                    return true;
+                }
+
+            }
+
+        }
+
+    return false;
+
+    }
+
+    private boolean op_log( Token t ){
+
+        if( t.lexema.equals("&&") || t.lexema.equals("||") ){
+            return true;
+        }
+        return false;
+    }
+
+
 
     private boolean oper_l(ArrayList<Token> tokens) {
 
@@ -231,7 +292,7 @@ public class Syntactic {
             if( tokens.get(1).token == TokenType.AbrirParentesis ) {
 
                 ArrayList<Token> tmp = new ArrayList<>();
-
+                //Debe agregar hasta encontrar la , y luego reemplazarlo por ;
                 tmp.add( tokens.get(2) );
                 tmp.add( tokens.get(3) );
                 tmp.add( tokens.get(4) );
@@ -328,8 +389,16 @@ public class Syntactic {
 
     private boolean assign(ArrayList<Token> tokens) {
 
+            //Valida el tamano minimo
+            if( tokens.size() < 4 ){
+                Errors.add("Assignment incomplete");
+                return false;
+            }
+
             if( tokens.get(0).token == TokenType.Identifier ){
+
                 if( tokens.get(1).token == TokenType.Equal ){
+
                     if(tokens.get(2).token == TokenType.Constante){
 
 
@@ -339,6 +408,16 @@ public class Syntactic {
                          }
 
                     }
+
+
+                    if( oper(new ArrayList<Token>( tokens.subList( 2, tokens.size() - 1 ) )) ){
+                        if( tokens.get(tokens.size() - 1).token == TokenType.PuntoyComa ){
+                            System.out.println("assign");
+                            return true;
+
+                        }
+                    }
+
 
                 }else{
                     Errors.add("Expecting equal lexema");

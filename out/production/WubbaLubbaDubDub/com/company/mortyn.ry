@@ -7,7 +7,7 @@ Morty Rick(){
            Morty y;
 
              Yes(y == 2){
-                Morty a = 1;
+                Morty a;
                 Morty x;
 
             }

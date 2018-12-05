@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8c3e7d44-cd8a-4e8c-89e4-4b3655f90662" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Errors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Errors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Syntactic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Syntactic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/mortyn.ry" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/mortyn.ry" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Syntactic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Syntactic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/mortyn.ry" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/mortyn.ry" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,20 +17,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/mortyn.ry">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="75">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Syntactic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="220" column="62" selection-start-line="220" selection-start-column="62" selection-end-line="220" selection-end-column="62" />
+            <state relative-caret-position="234">
+              <caret line="316" selection-start-line="316" selection-end-line="316" />
+              <folding>
+                <element signature="method#cond#0;class#Syntactic#0" />
+                <element signature="method#op_log#0;class#Syntactic#0" />
+                <element signature="method#oper_rel#0;class#Syntactic#0" />
+                <element signature="method#var#0;class#Syntactic#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Symbols.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+            <state relative-caret-position="255">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -87,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Tokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="97" selection-start-line="22" selection-end-line="23" />
+            <state relative-caret-position="286">
+              <caret line="25" column="60" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -119,7 +125,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>sent</find>
+      <find>var</find>
+      <find>op</find>
+      <find>oper_a</find>
+      <find>oper_l</find>
       <find>assign</find>
+      <find>oper</find>
+      <find>oper(</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,8 +149,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Lexical.java" />
         <option value="$PROJECT_DIR$/src/com/company/Errors.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/mortyn.ry" />
         <option value="$PROJECT_DIR$/src/com/company/Syntactic.java" />
+        <option value="$PROJECT_DIR$/src/com/company/mortyn.ry" />
       </list>
     </option>
   </component>
@@ -215,7 +227,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544029123219" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544047196605" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
@@ -368,13 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Tokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="97" selection-start-line="22" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -382,13 +387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Symbols.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -417,17 +415,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/mortyn.ry">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Symbols.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="255">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Tokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Syntactic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="220" column="62" selection-start-line="220" selection-start-column="62" selection-end-line="220" selection-end-column="62" />
+        <state relative-caret-position="234">
+          <caret line="316" selection-start-line="316" selection-end-line="316" />
+          <folding>
+            <element signature="method#cond#0;class#Syntactic#0" />
+            <element signature="method#op_log#0;class#Syntactic#0" />
+            <element signature="method#oper_rel#0;class#Syntactic#0" />
+            <element signature="method#var#0;class#Syntactic#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/mortyn.ry">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="21" />
         </state>
       </provider>
     </entry>
