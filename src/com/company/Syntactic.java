@@ -18,7 +18,7 @@ public class Syntactic {
 
         if( !checkEntry( mainIndex ) ){
             System.out.println("Rick function error in definition!");
-            System.out.println("Excepctiong: <TYPE> Rick(){}");
+            System.out.println("Excepcting: <TYPE> Rick(){}");
             System.exit(-1);
         }
 
@@ -107,9 +107,7 @@ public class Syntactic {
         }else if( tokens.get(0).token == TokenType.Condition ){
             this.cond(tokens);
         }else{
-
             this.loop(tokens);
-
         }
 
     }
@@ -146,9 +144,7 @@ public class Syntactic {
                     }
 
                 }else{
-                    System.out.println("Expecting Logical Operation");
-                    System.exit(-1);
-
+                    Errors.add("Expecting Logical Operation");
                 }
 
             }
@@ -167,8 +163,7 @@ public class Syntactic {
                 }
             }
         }else{
-            System.out.println("expecting logial operation");
-            System.exit(-1);
+            Errors.add("expecting logial operation");
         }
         return false;
 
@@ -223,9 +218,7 @@ public class Syntactic {
                     }
 
                 }else{
-
                     Errors.add("Expecting Logical Operation");
-
                 }
 
 
