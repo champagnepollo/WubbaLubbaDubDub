@@ -28,7 +28,7 @@ public class Lexical {
     public void analize(String path){
 
         this.readFile(path);
-        StringTokenizer t = new StringTokenizer(this.file, "*+-/;(){}\n ", true);
+        StringTokenizer t = new StringTokenizer(this.file, "*+-,/;(){}\n ", true);
 
         Tokenizer tokenizer = new Tokenizer();
 
@@ -50,7 +50,7 @@ public class Lexical {
                         break;
                     }
                 }
-                if(!found) System.out.println("Error lexico: '" + lexema + "' no reconocido");
+                if(!found) Errors.add("Error lexico: '" + lexema + "' no reconocido");
         }
     }//Este método devuelve la tabla de símbolos para el analizador sintáctico.
 }

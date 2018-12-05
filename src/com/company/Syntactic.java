@@ -166,6 +166,9 @@ public class Syntactic {
                     return true;
                 }
             }
+        }else{
+            System.out.println("expecting logial operation");
+            System.exit(-1);
         }
         return false;
 
@@ -220,9 +223,8 @@ public class Syntactic {
                     }
 
                 }else{
-                    
-                    System.out.println("Expecting Logical Operation");
-                    System.exit(-1);
+
+                    Errors.add("Expecting Logical Operation");
 
                 }
 
@@ -231,9 +233,83 @@ public class Syntactic {
 
 
 
+        }else if( tokens.get(0).lexema.equals("Adventure") ){
+            //Adventure
+            if( tokens.get(1).token == TokenType.AbrirParentesis ) {
+
+                ArrayList<Token> tmp = new ArrayList<>();
+
+                tmp.add( tokens.get(2) );
+                tmp.add( tokens.get(3) );
+                tmp.add( tokens.get(4) );
+
+                if( tokens.get(5).token == TokenType.Coma )
+                    tokens.get(5).token = TokenType.PuntoyComa;
+
+                tmp.add( tokens.get(5) );
+
+                if(!assign(tmp)){
+                    Errors.add("expecting assign in loop");
+
+                }
+                tmp.clear();
+                int count = 6;
+
+                while( tokens.get(count).token != TokenType.Coma ){
+
+                    tmp.add(tokens.get(count));
+                    count++;
+                }
+                if(!oper_l(tmp)) {
+                    Errors.add("expecitng logical operation in loop");
+
+                }
+
+
+                tmp.clear();
+                count++;
+                while( tokens.get(count).token != TokenType.CerrarParentesis ) {
+
+                    tmp.add(tokens.get(count));
+                    count++;
+                }
+                tmp.add( tokens.get(5) );
+
+                if(!assign(tmp)){
+                    Errors.add("expecting assign in the loop");
+
+                }
+                tmp.clear();
+
+
+                count+=2;
+
+                for( int i = count; i < tokens.size(); i++ ){
+
+                    tmp.add(tokens.get(i));
+                }
+                System.out.println("loop");
+                sent(tmp);
+                tmp.clear();
+
+
+
+            }
+            //Si es cierre de linea debe ignorar
+        }else if( !tokens.get(0).lexema.equals("}") ){
+            Errors.add("Syntax error: '" + tokens.get(0).lexema + "' not expected" );
+
         }
 
         return false;
+    }
+
+    private void printArray(ArrayList<Token> t){
+
+        for(int i = 0; i < t.size(); i++){
+
+            System.out.println(t.get(i).token);
+        }
     }
 
     private boolean decl(ArrayList<Token> tokens) {
@@ -246,28 +322,36 @@ public class Syntactic {
                     return true;
                 }
             }
+
+            // Si no fue una declaracion de primer tipo, se intentara segundo tipo
+            // decl:: <type> <assign>
+
+            this.assign( new ArrayList<Token>(tokens.subList(1, tokens.size())) );
+
+
         }
         return false;
     }
 
     private boolean assign(ArrayList<Token> tokens) {
-        if( tokens.get(0).token == TokenType.Tipo ){
 
-            if( tokens.get(1).token == TokenType.Identifier ){
-                if( tokens.get(2).token == TokenType.Equal ){
-                    if(tokens.get(3).token == TokenType.Constante){
+            if( tokens.get(0).token == TokenType.Identifier ){
+                if( tokens.get(1).token == TokenType.Equal ){
+                    if(tokens.get(2).token == TokenType.Constante){
 
 
-                        if( tokens.get(4).token == TokenType.PuntoyComa ){
+                        if( tokens.get(3).token == TokenType.PuntoyComa ){
                             System.out.println("assign");
                             return true;
                          }
 
                     }
 
+                }else{
+                    Errors.add("Expecting equal lexema");
+
                 }
 
-            }
         }
         return false;
     }

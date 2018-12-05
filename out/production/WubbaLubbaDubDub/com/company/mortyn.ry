@@ -1,14 +1,16 @@
 Morty Rick(){
 
     Morty x;
-    Morty y;
+    Adventure(x = 2, x >= y, x = 2 ){
 
-    Passthebutter( x <= y ){
+        Passthebutter(x < 2){
+           Morty y;
 
-        Passthebutter( x = y ){
+             Yes(y == 2){
+                Morty a = 1;
+                Morty x;
 
-            Morty x;
+            }
         }
     }
-
 }
