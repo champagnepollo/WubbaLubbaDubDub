@@ -1,6 +1,7 @@
 package com.company;
 
 
+
 import java.util.ArrayList;
 
 public class Syntactic {
@@ -379,7 +380,13 @@ public class Syntactic {
             if( tokens.get(1).token == TokenType.Identifier ){
 
                 if( tokens.get(2).token == TokenType.PuntoyComa ){
-                    printArray(tokens);
+
+                    TrickToken tmp = new TrickToken();
+                    tmp.token = new ArrayList<Token>(tokens);
+                    tmp.tipo = "decl";
+                    Trick.add(tmp);
+                    System.out.println("here tokens "+tokens.get(0).lexema);
+
                     System.out.println("decl");
 
                     return true;
@@ -388,7 +395,16 @@ public class Syntactic {
 
             // Si no fue una declaracion de primer tipo, se intentara segundo tipo
             // decl:: <type> <assign>
-            printArray(tokens);
+            System.out.println("here tokens"+tokens.get(0).lexema);
+
+
+
+
+            TrickToken tmp = new TrickToken();
+            tmp.token = new ArrayList<Token>(tokens);
+            tmp.tipo = "decl";
+
+            Trick.add(tmp);
             this.assign( new ArrayList<Token>(tokens.subList(1, tokens.size())) );
 
 
@@ -412,7 +428,13 @@ public class Syntactic {
 
 
                         if( tokens.get(3).token == TokenType.PuntoyComa ){
-                            printArray(tokens);
+                            System.out.println("here tokens"+tokens.get(0).lexema);
+                            TrickToken tmp = new TrickToken();
+                            tmp.token = new ArrayList<Token>(tokens);
+                            tmp.tipo = "assign";
+                            Trick.add(tmp);
+                            System.out.println("AGR");
+                            System.out.println(Trick.trick.get(0).tipo);
                             System.out.println("assign");
 
                             return true;

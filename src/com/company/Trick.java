@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public class Trick {
 
-    public static ArrayList<ArrayList<Token>> trick = new ArrayList<>();
+    public static ArrayList< TrickToken > trick = new ArrayList<>();
 
-    public static void add(ArrayList<Token> tokens){
+    public static void add(TrickToken tt){
 
-        Trick.trick.add( tokens );
-
+        Trick.trick.add( tt );
+        System.out.println(Trick.trick.size());
     }
+
+
 
 
 }
