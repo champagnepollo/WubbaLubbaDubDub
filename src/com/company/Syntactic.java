@@ -30,8 +30,6 @@ public class Syntactic {
 
 
         int p = EntryBracketAt( mainIndex );
-        System.out.println(p);
-        System.out.println(Symbols.table.size());
         analize( p, Symbols.table.size() );
 
     }
@@ -385,7 +383,6 @@ public class Syntactic {
                     tmp.token = new ArrayList<Token>(tokens);
                     tmp.tipo = "decl";
                     Trick.add(tmp);
-                    System.out.println("here tokens "+tokens.get(0).lexema);
 
                     System.out.println("decl");
 
@@ -395,9 +392,6 @@ public class Syntactic {
 
             // Si no fue una declaracion de primer tipo, se intentara segundo tipo
             // decl:: <type> <assign>
-            System.out.println("here tokens"+tokens.get(0).lexema);
-
-
 
 
             TrickToken tmp = new TrickToken();
@@ -424,17 +418,14 @@ public class Syntactic {
 
                 if( tokens.get(1).token == TokenType.Equal ){
 
-                    if(tokens.get(2).token == TokenType.Constante){
+                    if(tokens.get(2).token == TokenType.Constante ||  tokens.get(2).token == TokenType.Summer){
 
 
                         if( tokens.get(3).token == TokenType.PuntoyComa ){
-                            System.out.println("here tokens"+tokens.get(0).lexema);
                             TrickToken tmp = new TrickToken();
                             tmp.token = new ArrayList<Token>(tokens);
                             tmp.tipo = "assign";
                             Trick.add(tmp);
-                            System.out.println("AGR");
-                            System.out.println(Trick.trick.get(0).tipo);
                             System.out.println("assign");
 
                             return true;

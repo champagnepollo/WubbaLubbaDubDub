@@ -41,7 +41,6 @@ public class Lexical {
 
                     //Compara para ver si algo coincide.
                     if(lexema.matches(tokenizer.tokens.get(a).lexema)){
-                        System.out.println(lexema + " | " + tokenizer.tokens.get(a).token);
 
 
                         Symbols.addToken( tokenizer.tokens.get(a).token, lexema );

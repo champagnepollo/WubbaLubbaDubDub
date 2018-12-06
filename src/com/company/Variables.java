@@ -22,4 +22,17 @@ public class Variables {
         }
         return false;
     }
+
+
+
+    public static String TypeById(String id){
+
+        for(int i = 0; i < v.size(); i++){
+
+            if(v.get(i).id.equals(id))
+                return v.get(i).tipo;
+
+        }
+        return "";
+    }
 }

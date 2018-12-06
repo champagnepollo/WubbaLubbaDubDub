@@ -1,8 +1,8 @@
 Morty Rick(){
 
-    Summer nombre = "gafa";
-    Morty x = 1;
-    Morty x;
+    Summer nombre = "1";
+    Morty x = 3;
+
 
     Adventure(x = 2, x >= y, x = x + 1 ){
 
@@ -11,7 +11,6 @@ Morty Rick(){
 
             Yes(y == 2){
                 Morty a;
-
             }
         }
     }

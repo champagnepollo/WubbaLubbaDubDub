@@ -1,5 +1,6 @@
 package com.company;
 
+
 public class Semantic {
 
     public void Semantic(){
@@ -11,11 +12,6 @@ public class Semantic {
 
         //Utiliza tabla Trick para comprobar t
 
-
-
-
-
-
     }
 
 
@@ -24,14 +20,29 @@ public class Semantic {
         switch (tipo){
             case "Morty":
 
-                Integer.parseInt()
+                try{
+
+                    int a = Integer.parseInt(d);
+
+                    return true;
+
+                }catch (Exception e){
+                    System.out.println(e);
+                    return false;
+                }
+
+            case "Summer":
+
+
+                if(d.matches("\"(.*?)\""))
+                    return true;
 
 
 
-                break;
+
         }
 
-
+        return false;
 
     }
 
@@ -50,7 +61,6 @@ public class Semantic {
                     Errors.add("Variable " + id + " already declared");
                 }else{
 
-
                     Variable v = new Variable();
                     v.id = id;
                     v.tipo = tipo;
@@ -59,10 +69,9 @@ public class Semantic {
                     //Validar tipo de dato
                     if( Trick.trick.get(i).token.size() > 3 ){
 
-                        String dato = Trick.trick.get(i).token.get(i).lexema;
+                        String dato = Trick.trick.get(i).token.get(3).lexema;
 
                         if( this.validate( tipo, dato ) ){
-
 
                             Variables.add(v);
 
@@ -72,21 +81,48 @@ public class Semantic {
 
                         }
 
-
-
                     }else{
 
                     Variables.add(v);
-                    //Valida tipo
-                    //Add
+
                     }
 
                 }
 
-                System.out.println(Trick.trick.get(i).token.get(1).lexema);
-                //Buscar identificador
-                //Si existe ERROR
-                //SI no existe AGREGAR
+
+            }else if(Trick.trick.get(i).tipo.equals("assign")){
+
+                //Si es una asignacion busca que exista, si no existe marca error si si exista valida tipo
+
+
+
+                String id = Trick.trick.get(i).token.get(0).lexema;
+                String dato = Trick.trick.get(i).token.get(2).lexema;
+
+                if(Variables.searchById(id)){
+
+                    String tipo = Variables.TypeById(id);
+
+                    if(this.validate( tipo, dato )){
+
+                        //Remplazar valor
+
+                    }else{
+
+
+                        Errors.add("Type error: Variable expecting its type");
+
+                    }
+
+
+                }else{
+
+
+                    Errors.add("Variable " + id + " not declared");
+                }
+
+
+
 
             }
 
