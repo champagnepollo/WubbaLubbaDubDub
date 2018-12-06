@@ -1,7 +1,5 @@
 package com.company;
 
-
-
 import java.util.ArrayList;
 
 public class Syntactic {
@@ -80,6 +78,7 @@ public class Syntactic {
         }
         return counter;
     }
+
     private int EntryAt() {
 
         int entryIndex = -1;
@@ -178,6 +177,7 @@ public class Syntactic {
         }
 
     }
+
     private boolean oper( ArrayList<Token> tokens ){
 
         if( tokens.size() < 3 ){
@@ -217,8 +217,6 @@ public class Syntactic {
         }
         return false;
     }
-
-
 
     private boolean oper_l(ArrayList<Token> tokens) {
 

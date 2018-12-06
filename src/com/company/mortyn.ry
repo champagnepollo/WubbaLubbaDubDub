@@ -1,10 +1,12 @@
+Morty y;
+
 Morty Rick(){
 
     Summer nombre = "1";
-    Morty x = 3;
+    y = 1;
 
 
-    Adventure(x = 2, x >= y, x = x + 1 ){
+    Adventure(x = 1, x >= y, x = x + 1 ){
 
         Passthebutter(x < 2){
             Morty y;

@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c3e7d44-cd8a-4e8c-89e4-4b3655f90662" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/company/Lexical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Lexical.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Semantic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Semantic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Syntactic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/Syntactic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/mortyn.ry" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WubbaLubbaDubDub/com/company/mortyn.ry" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Semantic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Semantic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Syntactic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Syntactic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Variables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Variables.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/mortyn.ry" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/mortyn.ry" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/mortyn.ry">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="75">
+              <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -29,16 +31,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Syntactic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="420" column="109" selection-start-line="420" selection-start-column="109" selection-end-line="420" selection-end-column="109" />
+            <state relative-caret-position="55">
+              <caret line="371" lean-forward="true" selection-start-line="371" selection-end-line="371" />
               <folding>
+                <element signature="method#analize#0;class#Syntactic#0" />
+                <element signature="method#EntryBracketAt#0;class#Syntactic#0" />
+                <element signature="method#checkEntry#0;class#Syntactic#0" />
+                <element signature="method#countBrackets#0;class#Syntactic#0" />
+                <element signature="method#EntryAt#0;class#Syntactic#0" />
+                <element signature="method#op#0;class#Syntactic#0" />
+                <element signature="method#oper_a#0;class#Syntactic#0" />
+                <element signature="method#sent#0;class#Syntactic#0" />
                 <element signature="method#cond#0;class#Syntactic#0" />
+                <element signature="method#oper#0;class#Syntactic#0" />
                 <element signature="method#op_log#0;class#Syntactic#0" />
                 <element signature="method#oper_l#0;class#Syntactic#0" />
                 <element signature="method#oper_rel#0;class#Syntactic#0" />
                 <element signature="method#var#0;class#Syntactic#0" />
                 <element signature="method#loop#0;class#Syntactic#0" />
                 <element signature="method#printArray#0;class#Syntactic#0" />
+                <element signature="method#decl#0;class#Syntactic#0" />
+                <element signature="method#assign#0;class#Syntactic#0" />
                 <element signature="method#analize#1;class#Syntactic#0" />
               </folding>
             </state>
@@ -48,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Lexical.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="240">
+              <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -59,15 +72,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="26" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -93,8 +97,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Semantic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="249">
+              <caret line="99" column="41" lean-forward="true" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Trick.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -102,13 +115,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Variables.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            <state relative-caret-position="267">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="e#134#144#0" expanded="true" />
                 <element signature="e#191#192#0" expanded="true" />
                 <element signature="e#216#217#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Variable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -155,9 +177,9 @@
         <option value="$PROJECT_DIR$/src/com/company/Variable.java" />
         <option value="$PROJECT_DIR$/src/com/company/Lexical.java" />
         <option value="$PROJECT_DIR$/src/com/company/Variables.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Syntactic.java" />
         <option value="$PROJECT_DIR$/src/com/company/Token.java" />
         <option value="$PROJECT_DIR$/src/com/company/Semantic.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Syntactic.java" />
         <option value="$PROJECT_DIR$/src/com/company/mortyn.ry" />
       </list>
     </option>
@@ -235,7 +257,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544085603586" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544087515178" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
@@ -317,7 +339,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962447" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21418637" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39360222" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991655" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -339,7 +361,7 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28755364" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28755364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -348,7 +370,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962447" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21418637" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21418637" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991655" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -410,20 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Variable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Trick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -431,53 +439,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Variables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <folding>
-            <element signature="e#134#144#0" expanded="true" />
-            <element signature="e#191#192#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Lexical.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TrickToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Symbols.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Syntactic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="420" column="109" selection-start-line="420" selection-start-column="109" selection-end-line="420" selection-end-column="109" />
-          <folding>
-            <element signature="method#cond#0;class#Syntactic#0" />
-            <element signature="method#op_log#0;class#Syntactic#0" />
-            <element signature="method#oper_l#0;class#Syntactic#0" />
-            <element signature="method#oper_rel#0;class#Syntactic#0" />
-            <element signature="method#var#0;class#Syntactic#0" />
-            <element signature="method#loop#0;class#Syntactic#0" />
-            <element signature="method#printArray#0;class#Syntactic#0" />
-            <element signature="method#analize#1;class#Syntactic#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -495,17 +460,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Lexical.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Trick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TrickToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Variable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Variables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#134#144#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Semantic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="249">
+          <caret line="99" column="41" lean-forward="true" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Syntactic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="371" lean-forward="true" selection-start-line="371" selection-end-line="371" />
+          <folding>
+            <element signature="method#analize#0;class#Syntactic#0" />
+            <element signature="method#EntryBracketAt#0;class#Syntactic#0" />
+            <element signature="method#checkEntry#0;class#Syntactic#0" />
+            <element signature="method#countBrackets#0;class#Syntactic#0" />
+            <element signature="method#EntryAt#0;class#Syntactic#0" />
+            <element signature="method#op#0;class#Syntactic#0" />
+            <element signature="method#oper_a#0;class#Syntactic#0" />
+            <element signature="method#sent#0;class#Syntactic#0" />
+            <element signature="method#cond#0;class#Syntactic#0" />
+            <element signature="method#oper#0;class#Syntactic#0" />
+            <element signature="method#op_log#0;class#Syntactic#0" />
+            <element signature="method#oper_l#0;class#Syntactic#0" />
+            <element signature="method#oper_rel#0;class#Syntactic#0" />
+            <element signature="method#var#0;class#Syntactic#0" />
+            <element signature="method#loop#0;class#Syntactic#0" />
+            <element signature="method#printArray#0;class#Syntactic#0" />
+            <element signature="method#decl#0;class#Syntactic#0" />
+            <element signature="method#assign#0;class#Syntactic#0" />
+            <element signature="method#analize#1;class#Syntactic#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/mortyn.ry">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
         </state>
       </provider>
     </entry>

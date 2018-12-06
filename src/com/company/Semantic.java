@@ -5,12 +5,6 @@ public class Semantic {
 
     public void Semantic(){
 
-        //Validar tipo de datos
-        //Variable exista
-        //Variable duplicadaas
-
-
-        //Utiliza tabla Trick para comprobar t
 
     }
 
@@ -93,8 +87,6 @@ public class Semantic {
             }else if(Trick.trick.get(i).tipo.equals("assign")){
 
                 //Si es una asignacion busca que exista, si no existe marca error si si exista valida tipo
-
-
 
                 String id = Trick.trick.get(i).token.get(0).lexema;
                 String dato = Trick.trick.get(i).token.get(2).lexema;
