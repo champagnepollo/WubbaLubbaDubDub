@@ -275,6 +275,7 @@ public class Syntactic {
                                 tmp.add(tokens.get(i));
                             }
                             System.out.println("loop");
+
                             sent(tmp);
                             tmp.clear();
 
@@ -296,62 +297,151 @@ public class Syntactic {
             if( tokens.get(1).token == TokenType.AbrirParentesis ) {
 
                 ArrayList<Token> tmp = new ArrayList<>();
-                //Debe agregar hasta encontrar la , y luego reemplazarlo por ;
-                tmp.add( tokens.get(2) );
-                tmp.add( tokens.get(3) );
-                tmp.add( tokens.get(4) );
-
-                if( tokens.get(5).token == TokenType.Coma )
-                    tokens.get(5).token = TokenType.PuntoyComa;
-
-                tmp.add( tokens.get(5) );
-
-                if(!assign(tmp)){
-                    Errors.add("expecting assign in loop");
-
-                }
-                tmp.clear();
-                int count = 6;
-
-                while( tokens.get(count).token != TokenType.Coma ){
-
+                int count = 2;
+                while( tokens.get(count).token != TokenType.CerrarParentesis ){
                     tmp.add(tokens.get(count));
                     count++;
                 }
-                if(!oper_l(tmp)) {
-                    Errors.add("expecitng logical operation in loop");
+                Token t = new Token(TokenType.Coma, ",");
 
+                tmp.add(t);
+
+                for(int i = 0; i < tmp.size(); i++){
+
+                    if(  tmp.get(i).lexema.equals(",")){
+
+                        tmp.get(i).lexema = ";";
+                        tmp.get(i).token = TokenType.PuntoyComa;
+
+                    }
                 }
 
 
-                tmp.clear();
+                ArrayList<Token> asignacion = new ArrayList<Token>();
+                ArrayList<Token> o_logico = new ArrayList<Token>();
+                ArrayList<Token> asignacion2 = new ArrayList<Token>();
+
+                count = 0;
+
+                while( tmp.get(count).token  != TokenType.PuntoyComa ){
+                    asignacion.add(tmp.get(count));
+                    count++;
+                }
+                asignacion.add(tmp.get(count));
                 count++;
-                while( tokens.get(count).token != TokenType.CerrarParentesis ) {
 
-                    tmp.add(tokens.get(count));
+                while( tmp.get(count).token  != TokenType.PuntoyComa ){
+                    o_logico.add(tmp.get(count));
                     count++;
                 }
-                tmp.add( tokens.get(5) );
+                asignacion.add(tmp.get(count));
+                count++;
 
-                if(!assign(tmp)){
-                    Errors.add("expecting assign in the loop");
 
+                while( tmp.get(count).token  != TokenType.PuntoyComa ){
+                    asignacion2.add(tmp.get(count));
+                    count++;
+                }
+                asignacion2.add(tmp.get(count));
+
+
+                if( this.assign(asignacion) ){
+
+
+                    if( this.oper_l( o_logico ) ){
+
+                        if( this.assign( asignacion2 ) ){
+
+                            System.out.println("loop");
+
+
+                        }else{
+
+                            Errors.add("Syntax error: Expecting asignment in third param in Adventure loop");
+                        }
+
+                    }else{
+
+                        Errors.add("Syntax error: Expecting logical op in second param in Adventure loop");
+                    }
+
+
+                }else{
+                    Errors.add("Syntax error: Expecting assign in first argument in loop");
                 }
                 tmp.clear();
-
-
-                count+=2;
-
+                count+=4;
                 for( int i = count; i < tokens.size(); i++ ){
 
                     tmp.add(tokens.get(i));
                 }
-                System.out.println("loop");
+                printArray(tmp);
                 sent(tmp);
                 tmp.clear();
 
+                //Debe serparar por ,
 
 
+
+                //Debe agregar hasta encontrar la , y luego reemplazarlo por ;
+//                tmp.add( tokens.get(2) );
+//                tmp.add( tokens.get(3) );
+//                tmp.add( tokens.get(4) );
+//
+//                if( tokens.get(5).token == TokenType.Coma )
+//                    tokens.get(5).token = TokenType.PuntoyComa;
+//
+//                tmp.add( tokens.get(5) );
+//
+//                if(!assign(tmp)){
+//                    Errors.add("expecting assign in loop");
+//                    System.exit(-1);
+//
+//                }
+//                tmp.clear();
+//                int count = 6;
+//
+//                while( tokens.get(count).token != TokenType.Coma ){
+//
+//                    tmp.add(tokens.get(count));
+//                    count++;
+//                }
+//                if(!oper_l(tmp)) {
+//                    Errors.add("expecitng logical operation in loop");
+//
+//                }
+//
+//
+//                tmp.clear();
+//                count++;
+//                while( tokens.get(count).token != TokenType.CerrarParentesis ) {
+//
+//                    tmp.add(tokens.get(count));
+//                    count++;
+//                }
+//                tmp.add( tokens.get(5) );
+//
+//                if(!assign(tmp)){
+//                    Errors.add("expecting assign in the loop");
+//
+//                }
+//                tmp.clear();
+//
+//
+//                count+=2;
+//
+//                for( int i = count; i < tokens.size(); i++ ){
+//
+//                    tmp.add(tokens.get(i));
+//                }
+//                System.out.println("loop");
+//                sent(tmp);
+//                tmp.clear();
+
+
+
+            }else{
+                Errors.add("Missing parentesis in Adventure loop");
             }
             //Si es cierre de linea debe ignorar
         }else if( !tokens.get(0).lexema.equals("}") ){
