@@ -182,6 +182,13 @@ public class Syntactic {
     private boolean oper( ArrayList<Token> tokens ){
 
         if( tokens.size() < 3 ){
+
+            if( this.var(tokens.get(0))  ){
+
+                return true;
+            }
+
+
             Errors.add("Oper missing tokens");
             return false;
         }
@@ -241,7 +248,7 @@ public class Syntactic {
 
     private boolean var( Token t ){
 
-        if( t.token == TokenType.Identifier || t.token == TokenType.Constante || t.token == TokenType.Boolean ){
+        if( t.token == TokenType.Identifier || t.token == TokenType.Constante || t.token == TokenType.Boolean  || t.token == TokenType.Summer){
             return true;
         }
         return false;
@@ -362,7 +369,7 @@ public class Syntactic {
 
         for(int i = 0; i < t.size(); i++){
 
-            System.out.println(t.get(i).token);
+            System.out.println(t.get(i).lexema);
         }
     }
 
@@ -372,14 +379,16 @@ public class Syntactic {
             if( tokens.get(1).token == TokenType.Identifier ){
 
                 if( tokens.get(2).token == TokenType.PuntoyComa ){
+                    printArray(tokens);
                     System.out.println("decl");
+
                     return true;
                 }
             }
 
             // Si no fue una declaracion de primer tipo, se intentara segundo tipo
             // decl:: <type> <assign>
-
+            printArray(tokens);
             this.assign( new ArrayList<Token>(tokens.subList(1, tokens.size())) );
 
 
@@ -403,7 +412,9 @@ public class Syntactic {
 
 
                         if( tokens.get(3).token == TokenType.PuntoyComa ){
+                            printArray(tokens);
                             System.out.println("assign");
+
                             return true;
                          }
 
