@@ -1,5 +1,8 @@
 Morty Rick(){
 
-    Meeseek var = 1;
+    Morty x = 3;
+    Adventure( x = 1, x < 2, x = x + 1){
+    x = 1;
 
+    }
 }

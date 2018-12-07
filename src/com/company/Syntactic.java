@@ -298,10 +298,16 @@ public class Syntactic {
 
                 ArrayList<Token> tmp = new ArrayList<>();
                 int count = 2;
-                while( tokens.get(count).token != TokenType.CerrarParentesis ){
-                    tmp.add(tokens.get(count));
-                    count++;
-                }
+
+try {
+
+    while (tokens.get(count).token != TokenType.CerrarParentesis) {
+
+
+        tmp.add(tokens.get(count));
+        count++;
+    }
+
                 Token t = new Token(TokenType.Coma, ",");
 
                 tmp.add(t);
@@ -369,12 +375,20 @@ public class Syntactic {
                 }else{
                     Errors.add("Syntax error: Expecting assign in first argument in loop");
                 }
+
+
+
                 tmp.clear();
                 count+=4;
                 for( int i = count; i < tokens.size(); i++ ){
 
                     tmp.add(tokens.get(i));
                 }
+
+}
+catch(Exception e){
+    Errors.add("Syntax error ';' not meant to be there");
+}
                 printArray(tmp);
                 sent(tmp);
                 tmp.clear();
@@ -517,7 +531,10 @@ public class Syntactic {
                             System.out.println("assign");
 
                             return true;
-                         }
+                         }else{
+
+                            Errors.add("Missing semicolon");
+                        }
 
                     }
 
@@ -548,6 +565,7 @@ public class Syntactic {
 
             //Los mete a pila hasta encontrar ;
             tmp.add(Symbols.table.get(i));
+
 
             if( Symbols.table.get(i).token == TokenType.PuntoyComa ){
 
