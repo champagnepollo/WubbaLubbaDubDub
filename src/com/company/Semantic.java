@@ -31,6 +31,12 @@ public class Semantic {
                 if(d.matches("\"(.*?)\""))
                     return true;
 
+            case "Meeseek":
+
+
+                if(d.matches("Alive|Dead"))
+                    return true;
+
 
 
 
